@@ -50,5 +50,14 @@ public class Pet {
         return null;
     }
 
+    public void setFoto(String string) {
+    }
+
+    public void setHistoria(String string) {
+    }
+
+    public void setNome(String string) {
+    }
+
     
 }

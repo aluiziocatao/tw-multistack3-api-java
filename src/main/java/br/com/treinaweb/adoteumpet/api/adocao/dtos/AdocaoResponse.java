@@ -2,9 +2,7 @@ package br.com.treinaweb.adoteumpet.api.adocao.dtos;
 
 import java.math.BigDecimal;
 
-import com.fasterxml.jackson.databind.PropertyNamingStrategies.SnakeCaseStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
-
+import br.com.treinaweb.adoteumpet.api.pet.dtos.PetResponse;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,13 +10,18 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonNaming(SnakeCaseStrategy.class)
-public class AdocaoRequest {
-    
+public class AdocaoResponse {
+
+    private Long id;
     private String email;
     private BigDecimal valor;
-    private Long petId;
-    
+    private PetResponse pet;
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getEmail() {
         return email;
     }
@@ -31,12 +34,12 @@ public class AdocaoRequest {
     public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
-    public Long getPetId() {
-        return petId;
+    public PetResponse getPet() {
+        return pet;
     }
-    public void setPetId(Long petId) {
-        this.petId = petId;
+    public void setPet(PetResponse pet) {
+        this.pet = pet;
     }
 
-
+    
 }
